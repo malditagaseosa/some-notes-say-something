@@ -15,7 +15,7 @@ export default {
   data() {
     return {
       title: "Some 🎵 Say Something 😎",
-      repository: "#"
+      repository: "https://github.com/malditagaseosa/some-notes-say-something"
     };
   }
 };
