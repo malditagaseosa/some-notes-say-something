@@ -1,16 +1,17 @@
 <template>
   <div id="app">
-    <navbar v-bind:title="title" v-bind:repository="repository"></navbar>
+    <app-header v-bind:title="title" v-bind:repository="repository"></app-header>
+    <main></main>
   </div>
 </template>
 
 <script>
-import navbar from "./components/Navbar.vue";
+import AppHeader from "./components/Header.vue";
 
 export default {
   name: "app",
   components: {
-    navbar
+    "app-header": AppHeader
   },
   data() {
     return {
