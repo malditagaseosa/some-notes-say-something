@@ -1,17 +1,19 @@
 <template>
   <div id="app">
     <app-header v-bind:title="title" v-bind:repository="repository"></app-header>
-    <main></main>
+    <app-main></app-main>
   </div>
 </template>
 
 <script>
 import AppHeader from "./components/Header.vue";
+import AppMain from "./components/Main.vue";
 
 export default {
   name: "app",
   components: {
-    "app-header": AppHeader
+    "app-header": AppHeader,
+    "app-main": AppMain
   },
   data() {
     return {

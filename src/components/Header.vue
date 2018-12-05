@@ -6,7 +6,7 @@
 </template>
 <script>
 export default {
-  name: "navbar",
+  name: "app-header",
   props: {
     title: String,
     repository: String
