@@ -23,17 +23,19 @@ export default {
       })
       .join("");
 
-    notesMessage = unicodeMessage.split("").map(currentValue => {
-      let n;
+    notesMessage = unicodeMessage
+      .split("")
+      .map(currentValue => {
+        let n;
 
-      currentValue > DEFAULT_NOTES.length - 1
-        ? (n = DEFAULT_NOTES[Math.floor(Math.random()*DEFAULT_NOTES.length)])
-        : (n = DEFAULT_NOTES[currentValue]);
+        currentValue > DEFAULT_NOTES.length - 1
+          ? (n = DEFAULT_NOTES[Math.floor(Math.random()*DEFAULT_NOTES.length)])
+          : (n = DEFAULT_NOTES[currentValue]);
 
-      return n;
+        return n;
     });
 
     return notesMessage;
-    
+
   }
 };
