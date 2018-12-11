@@ -29,6 +29,8 @@
 </template>
 
 <script>
+import ConvertService from "../services/convert-to-notes.js";
+
 export default {
   name: "app-main",
   data() {
@@ -38,7 +40,7 @@ export default {
   },
   methods: {
     onSubmit: function() {
-      console.log(this.message);
+      console.log(this.message, ConvertService.convert(this.message));
       this.message = "";
     }
   }
