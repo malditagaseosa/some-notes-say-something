@@ -17,13 +17,18 @@
                 class="mx-auto"
                 type="submit"
                 :size="'md'"
-                :variant="'success'"
-              >Convert Me</b-button>
+                :variant="'outline-success'"
+              >Convert</b-button>
             </div>
           </b-form>
         </div>
         <div class="col-md-4"></div>
       </div>
+      <section v-if="resultState" id="result" class="container">
+        <ul>
+          <li v-for="note in notes">{{note}}</li>
+        </ul>
+      </section>
     </div>
   </main>
 </template>
@@ -35,13 +40,20 @@ export default {
   name: "app-main",
   data() {
     return {
-      message: ""
+      message: "",
+      notes: [],
+      resultState: false,
     };
   },
   methods: {
     onSubmit: function() {
       console.log(this.message, ConvertService.convert(this.message));
+      this.notes = ConvertService.convert(this.message);
+      this.showResult();
       this.message = "";
+    },
+    showResult: function(){
+      this.resultState = true;
     }
   }
 };
@@ -54,5 +66,18 @@ export default {
 
 #btn-convert {
   margin-top: 7%;
+}
+
+#result {
+  text-align: center;
+}
+
+#result ul {
+  list-style: none;
+}
+
+#result ul li {
+  display: inline-block;
+  margin: 0 1% 0 1%;
 }
 </style>
