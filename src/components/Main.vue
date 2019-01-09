@@ -49,7 +49,9 @@ export default {
     onSubmit: function() {
       console.log(this.message, ConvertService.convert(this.message));
       this.notes = ConvertService.convert(this.message);
+      ConvertService.play(this.notes);
       this.showResult();
+
       this.message = "";
     },
     showResult: function(){
