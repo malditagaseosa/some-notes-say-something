@@ -16,7 +16,7 @@ export default {
    * every char converted to music note
    *
    * @param {String} message
-   * @returns {Array} notes
+   * @returns {String}
    */
   convert: function(message) {
     let notesMessage, unicodeMessage;
