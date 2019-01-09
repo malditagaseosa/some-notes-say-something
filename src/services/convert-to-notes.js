@@ -40,7 +40,7 @@ export default {
         return n;
     });
 
-    return notesMessage;
+    return notesMessage.join("");
 
   },
   play: function(notes){
