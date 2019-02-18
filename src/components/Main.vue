@@ -37,9 +37,7 @@ export default {
   },
   methods: {
     handleInput: function() {
-      console.log(this.message, ConvertService.convert(this.message));
       this.notes = ConvertService.convert(this.message);  
-      ConvertService.play();
     },
   }
 };

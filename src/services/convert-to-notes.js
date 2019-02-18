@@ -1,11 +1,13 @@
 /**
  * This service provide functions to convert the message to music notes
  * and play it
- */
+ 
 
 import Tone from "tone";
 
 const synth = new Tone.Synth().toMaster();
+
+*/
 
 //Default notes to use to convert the letters
 const DEFAULT_NOTES = ["C", "D", "E", "F", "G", "A", "B", "C","C4", "D4", "E4",
