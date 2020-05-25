@@ -1,6 +1,6 @@
 # Some Notes Say Something
 
-This is a little app to convert messages in music notes. Is a fun way to connect music with words and create a something new with the both worlds
+This is a little app to convert messages in music notes. Is a fun way to learn the basics of vuejs
 
 ## Project setup
 
